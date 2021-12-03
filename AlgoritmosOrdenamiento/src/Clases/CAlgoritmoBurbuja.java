@@ -21,7 +21,9 @@ public class CAlgoritmoBurbuja implements IAlgoritmoOrdenamiento{
     public int getTamanio() {
         return tamanio;
     }
-    
+    /**
+     * @param orden true: ordena descendente
+     */
     @Override
     public void Ordenar(boolean orden) {
         int i = 0;
@@ -53,6 +55,7 @@ public class CAlgoritmoBurbuja implements IAlgoritmoOrdenamiento{
     }
     @Override
     public void Ordenar() {
+        // ordenar ascendente
         this.Ordenar(false);
     }
     @Override
