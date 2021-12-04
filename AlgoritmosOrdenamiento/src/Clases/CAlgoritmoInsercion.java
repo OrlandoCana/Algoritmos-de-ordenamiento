@@ -1,5 +1,8 @@
 package Clases;
-
+/**
+ * @author OrlandoCana
+ * @version 1.0
+ */
 public class CAlgoritmoInsercion implements IAlgoritmoOrdenamiento{
     private int[] Arreglo;
     private int tamanio;
