@@ -27,7 +27,9 @@ public class CAlgoritmoInsercion implements IAlgoritmoOrdenamiento{
     public void Ordenar() {
         this.Ordenar(false);
     }
-
+    /**
+     * @param orden true: ordena descendente
+     */
     @Override
     public void Ordenar(boolean orden) {
         for (int k = 0; k < this.tamanio; k++){

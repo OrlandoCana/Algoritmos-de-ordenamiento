@@ -17,7 +17,21 @@ public class CAlgoritmoMergeSort implements IAlgoritmoOrdenamiento {
     public int getTamanio() {
         return tamanio;
     }
-    
+    /**
+     * @param orden true: ordena descendente
+     */
+    @Override
+    public void Ordenar() {
+        // ordenar ascendente
+        this.Ordenar(false);
+    }
+    /**
+     * @param orden true: ordena descendente
+     */
+    @Override
+    public void Ordenar(boolean orden) {
+        mergeSort(this.Arreglo, this.tamanio, orden);
+    }
     @Override
     public void MostrarArreglo() {
         for (int k = 0; k < this.tamanio; k++){
@@ -26,10 +40,7 @@ public class CAlgoritmoMergeSort implements IAlgoritmoOrdenamiento {
         System.out.println();
         
     }
-    @Override
-    public void Ordenar() {
-        Ordenar(false);
-    }
+    
     /**
      * 
      * @param arr : arreglo original
@@ -87,12 +98,5 @@ public class CAlgoritmoMergeSort implements IAlgoritmoOrdenamiento {
         //llamada al metodo de intercambio de elementos 
         merge_intercambiar(arr, l, r, mid, tam - mid,Orden);
     }
-    @Override
-    public void Ordenar(boolean orden) {
-        int[] A = this.Arreglo;
-        mergeSort(A, this.tamanio, orden);
-        this.Arreglo = A;
-    }
-    
-    
+
 }
