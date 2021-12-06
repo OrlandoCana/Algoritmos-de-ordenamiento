@@ -4,16 +4,16 @@
  */
 package Principal;
 
-import Clases.CAlgoritmoCountySort;
+import Clases.CAlgoritmoRadixSort;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // Arreglo 1 y 2
-        int[] arr1 = {1, 2 ,5 ,7 ,8 ,4};
-        int[] arr2 = {3, 2 ,5 ,9 ,8 ,6};
+        int[] arr1 = {1, 2 ,5 ,17 ,8 ,4};
+        int[] arr2 = {3, 322 ,15 ,19 ,28 ,6};
         // crear objetos de tipo CAlgoritmoInsercion
-        CAlgoritmoCountySort Obj1 = new CAlgoritmoCountySort(arr1);
-        CAlgoritmoCountySort Obj2 = new CAlgoritmoCountySort(arr2);
+        CAlgoritmoRadixSort Obj1 = new CAlgoritmoRadixSort(arr1);
+        CAlgoritmoRadixSort Obj2 = new CAlgoritmoRadixSort(arr2);
         // ordenar ascendente arr1 y mostrar
         Obj1.Ordenar();
         Obj1.MostrarArreglo();
