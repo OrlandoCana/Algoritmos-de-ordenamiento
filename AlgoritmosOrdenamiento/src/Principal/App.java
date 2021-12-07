@@ -4,16 +4,16 @@
  */
 package Principal;
 
-import Clases.CAlgoritmoQuickSort;
+import Clases.CAlgoritmoHeapSort;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // Arreglo 1 y 2
-        int[] arr1 = {1, 2 ,5 ,17 ,8 ,4};
-        int[] arr2 = {3, 322 ,15 ,19 ,28 ,6};
+        int[] arr1 = {1, 2 ,5 ,17 ,8 ,4 ,14};
+        int[] arr2 = {3, 322 ,15 ,19 ,28 ,6 ,14};
         // crear objetos de tipo CAlgoritmoInsercion
-        CAlgoritmoQuickSort Obj1 = new CAlgoritmoQuickSort(arr1);
-        CAlgoritmoQuickSort Obj2 = new CAlgoritmoQuickSort(arr2);
+        CAlgoritmoHeapSort Obj1 = new CAlgoritmoHeapSort(arr1);
+        CAlgoritmoHeapSort Obj2 = new CAlgoritmoHeapSort(arr2);
         // ordenar ascendente arr1 y mostrar
         Obj1.Ordenar();
         Obj1.MostrarArreglo();
