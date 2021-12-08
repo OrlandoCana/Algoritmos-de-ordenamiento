@@ -3,24 +3,14 @@ package Clases;
  * @author OrlandoCana
  * @version 1.0
  */
-public class CAlgoritmoInsercion implements IAlgoritmoOrdenamiento{
-    private int[] Arreglo;
-    private int tamanio;
+public class CAlgoritmoInsercion extends CAlgoritmoOrdenamiento{
+    
     /**
      * 
      * @param arreglo
      */
     public CAlgoritmoInsercion(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
-    }
-    
-    public int[] getArreglo() {
-        return Arreglo;
-    }
-
-    public int getTamanio() {
-        return tamanio;
+        super(arreglo);
     }
 
     @Override
@@ -50,12 +40,4 @@ public class CAlgoritmoInsercion implements IAlgoritmoOrdenamiento{
             this.Arreglo[j+1] = elemento;
         }
     }
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-    }
-    
 }

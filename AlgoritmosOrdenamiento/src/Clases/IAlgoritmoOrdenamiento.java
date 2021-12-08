@@ -6,5 +6,4 @@ package Clases;
 public interface IAlgoritmoOrdenamiento {
     void Ordenar();// ordenar ascendente
     void Ordenar(boolean orden);// ordenar true -> descendente , false: ascendente
-    void MostrarArreglo(); // mostrar arreglo
 }

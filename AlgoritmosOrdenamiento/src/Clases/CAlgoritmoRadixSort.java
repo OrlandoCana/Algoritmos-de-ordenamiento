@@ -1,25 +1,14 @@
 package Clases;
 
-public class CAlgoritmoRadixSort implements IAlgoritmoOrdenamiento {
-    private int[] Arreglo;
-    private int tamanio;
+public class CAlgoritmoRadixSort extends CAlgoritmoOrdenamiento {
+    
     /**
      * @param arreglo contiene numeros enteros
      */
     public CAlgoritmoRadixSort(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
+        super(arreglo);
     }
     
-    public int[] getArreglo() {
-        return Arreglo;
-    }
-
-    public int getTamanio() {
-        return tamanio;
-    }
-    
-
     @Override
     public void Ordenar() {
         this.Ordenar(false);
@@ -38,13 +27,7 @@ public class CAlgoritmoRadixSort implements IAlgoritmoOrdenamiento {
             }
         }
     }
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-    }
+    
     private static void County_Sort(int[] Array, int exp, boolean orden)
     {
         int[] Salida = new int[Array.length]; 

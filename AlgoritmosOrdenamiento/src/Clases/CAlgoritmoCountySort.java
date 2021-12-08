@@ -3,23 +3,12 @@ package Clases;
  * @author OrlandoCana
  * @version 1.0
  */
-public class CAlgoritmoCountySort implements IAlgoritmoOrdenamiento{
-    private int[] Arreglo;
-    private int tamanio;
+public class CAlgoritmoCountySort extends CAlgoritmoOrdenamiento{
     /**
      * @param arreglo contiene numeros enteros
      */
     public CAlgoritmoCountySort(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
-    }
-    
-    public int[] getArreglo() {
-        return Arreglo;
-    }
-
-    public int getTamanio() {
-        return tamanio;
+        super(arreglo);
     }
     
 
@@ -32,13 +21,7 @@ public class CAlgoritmoCountySort implements IAlgoritmoOrdenamiento{
     public void Ordenar(boolean orden) {
         County_Sort(this.Arreglo, 1, orden);
     }
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-    }
+
     private static void County_Sort(int[] Array, int exp, boolean orden)
     {
         int[] Salida = new int[Array.length]; 

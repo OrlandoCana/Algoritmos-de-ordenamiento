@@ -1,23 +1,11 @@
 package Clases;
 
-public class CAlgoritmoHeapSort implements IAlgoritmoOrdenamiento{
-    private int[] Arreglo;
-    private int tamanio;
+public class CAlgoritmoHeapSort extends CAlgoritmoOrdenamiento{
     /**
-     * 
-     * @param arreglo
+     * @param arreglo contiene numeros enteros
      */
     public CAlgoritmoHeapSort(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
-    }
-    
-    public int[] getArreglo() {
-        return Arreglo;
-    }
-
-    public int getTamanio() {
-        return tamanio;
+        super(arreglo);
     }
 
     @Override
@@ -110,12 +98,5 @@ public class CAlgoritmoHeapSort implements IAlgoritmoOrdenamiento{
         } while (n > 0);
     }
 
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-    }
     
 }

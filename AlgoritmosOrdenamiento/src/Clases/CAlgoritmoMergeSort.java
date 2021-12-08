@@ -3,20 +3,12 @@ package Clases;
  * @author OrlandoCana
  * @version 1.0
  */
-public class CAlgoritmoMergeSort implements IAlgoritmoOrdenamiento {
-    private int[] Arreglo;
-    private int tamanio;
-    public CAlgoritmoMergeSort(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
-    }
-    public int[] getArreglo() {
-        return Arreglo;
-    }
+public class CAlgoritmoMergeSort extends CAlgoritmoOrdenamiento {
     
-    public int getTamanio() {
-        return tamanio;
+    public CAlgoritmoMergeSort(int[] arreglo) {
+        super(arreglo);
     }
+
     /**
      * @param orden true: ordena descendente
      */
@@ -31,14 +23,6 @@ public class CAlgoritmoMergeSort implements IAlgoritmoOrdenamiento {
     @Override
     public void Ordenar(boolean orden) {
         mergeSort(this.Arreglo, this.tamanio, orden);
-    }
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-        
     }
     
     /**

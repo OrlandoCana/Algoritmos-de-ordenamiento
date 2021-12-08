@@ -3,23 +3,12 @@ package Clases;
  * @author OrlandoCana
  * @version 1.0
  */
-public class CAlgoritmoBurbuja implements IAlgoritmoOrdenamiento{
-    private int[] Arreglo;
-    private int tamanio;
+public class CAlgoritmoBurbuja extends CAlgoritmoOrdenamiento{
     /**
      * @param arreglo contiene numeros enteros
      */
     public CAlgoritmoBurbuja(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
-    }
-    
-    public int[] getArreglo() {
-        return Arreglo;
-    }
-
-    public int getTamanio() {
-        return tamanio;
+        super(arreglo);
     }
     
     @Override
@@ -58,15 +47,5 @@ public class CAlgoritmoBurbuja implements IAlgoritmoOrdenamiento{
                 }
             }
         }
-    }
-   
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-    }
-    
-    
+    }    
 }

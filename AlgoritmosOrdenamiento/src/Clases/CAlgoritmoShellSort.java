@@ -3,22 +3,10 @@ package Clases;
  * @author OrlandoCana
  * @version 1.0
  */
-public class CAlgoritmoShellSort implements IAlgoritmoOrdenamiento{
+public class CAlgoritmoShellSort extends CAlgoritmoOrdenamiento{
 
-    private int[] Arreglo;
-    private int tamanio;
-    
     public CAlgoritmoShellSort(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
-    }
-    
-    public int[] getArreglo() {
-        return Arreglo;
-    }
-
-    public int getTamanio() {
-        return tamanio;
+        super(arreglo);
     }
 
     @Override
@@ -57,12 +45,6 @@ public class CAlgoritmoShellSort implements IAlgoritmoOrdenamiento{
             n /= 2;
         }
     }
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-    }
+    
     
 }

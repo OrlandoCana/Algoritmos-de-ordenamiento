@@ -3,19 +3,10 @@ package Clases;
  * @author OrlandoCana
  * @version 1.0
  */
-public class CAlgoritmoQuickSort implements IAlgoritmoOrdenamiento {
-    private int[] Arreglo;
-    private int tamanio;
-    public CAlgoritmoQuickSort(int[] arreglo) {
-        this.Arreglo = arreglo;
-        this.tamanio = arreglo.length;
-    }
-    public int[] getArreglo() {
-        return Arreglo;
-    }
+public class CAlgoritmoQuickSort extends CAlgoritmoOrdenamiento {
     
-    public int getTamanio() {
-        return tamanio;
+    public CAlgoritmoQuickSort(int[] arreglo) {
+        super(arreglo);
     }
     /**
      * @param orden true: ordena descendente
@@ -37,13 +28,6 @@ public class CAlgoritmoQuickSort implements IAlgoritmoOrdenamiento {
         }
     }
 
-    @Override
-    public void MostrarArreglo() {
-        for (int k = 0; k < this.tamanio; k++){
-            System.out.print(this.Arreglo[k] + " ");
-        }
-        System.out.println();
-    }
     private void quicksort(int[] arr, int primero, int ultimo)
     {
         int i, j, central;
